@@ -1,6 +1,6 @@
 //
 // Created by hy on 16-7-22.
-//
+// 该代码完成字符串的全排列
 
 #include <iostream>
 using namespace std;
