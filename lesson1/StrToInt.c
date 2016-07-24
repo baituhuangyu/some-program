@@ -1,6 +1,6 @@
 //
 // Created by hy on 16-7-24.
-//
+// 数字转换成字符串
 
 # include<stdio.h>
 #include <ctype.h>
@@ -51,17 +51,17 @@ int StrToInt(const char *str) {
     return sign > 0 ? n : -n;
 }
 
-//void main(void) {
-//    int ccc = 0;
-//    const char *aStr = "12345";
-////    const char *aStr = "214748369";
-////    const char *aStr = "214748364";
-//
-////    const char *aStr = "2147483648";
-////    const char *aStr = "-2147483648";
-////    const char *aStr = "+2147483648";
-//
-//
-//    ccc = StrToInt(aStr);
-//    printf("%d", ccc);
-//}
+void main(void) {
+    int ccc = 0;
+    const char *aStr = "12345";
+//    const char *aStr = "214748369";
+//    const char *aStr = "214748364";
+
+//    const char *aStr = "2147483648";
+//    const char *aStr = "-2147483648";
+//    const char *aStr = "+2147483648";
+
+
+    ccc = StrToInt(aStr);
+    printf("%d", ccc);
+}

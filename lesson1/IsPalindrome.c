@@ -1,6 +1,6 @@
 //
 // Created by hy on 16-7-24.
-//
+// 判断是否为回文
 
 
 #include <stdbool.h>
