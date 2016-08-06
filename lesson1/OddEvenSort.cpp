@@ -4,6 +4,7 @@
 
 
 #include <iostream>
+
 using namespace std;
 
 
@@ -13,7 +14,7 @@ bool IsOddNumber(int data) {
 }
 
 //奇数和偶数互换
-int* OddEvenSort(int *pData, unsigned int length) {
+int *OddEvenSort(int *pData, unsigned int length) {
 //void OddEvenSort(int *pData, unsigned int length) {
     if (pData == NULL || length == 0) {
         return pData;
@@ -41,11 +42,32 @@ int* OddEvenSort(int *pData, unsigned int length) {
     return pData;
 }
 
+int *OddEvenSort2(int data[], int lo, int hi) {
+    int i = lo - 1;
+    for (int j = lo; j < hi; j++) {
+//        data[j]指向奇数，交换
+        if (IsOddNumber(data[j])) {
+            swap(data[++i], data[j]);
+        }
+    }
+    swap(data[i + 1], data[hi]);
+//    for (int k = 0; k < 8; ++k) {
+//        cout << data[k] << endl;
+//    }
+    return data;
+}
 
-int main(int){
-    int a[] = {2,8,7,1,3,5,6,4};
+
+int main(int) {
+    int a[] = {2, 8, 7, 1, 3, 5, 6, 4};
     unsigned int aLength = 8;
-    int *b = OddEvenSort(a, aLength);
+
+//    测试1
+//    int *b = OddEvenSort(a, aLength);
+
+//    测试2
+    int *b = OddEvenSort2(a, 0, aLength-1);
+
 //    cout << *b << endl;
     int i = 0;
     while(i <= aLength-1){
@@ -53,5 +75,6 @@ int main(int){
         b++;
         i++;
     }
+
 }
 
